@@ -1,0 +1,155 @@
+<section class="hero position-relative overflow-hidden">
+  <div class="container py-5 py-lg-6">
+    <div class="row align-items-center gy-4">
+      <div class="col-12 col-lg-6">
+        <span class="badge rounded-pill text-bg-primary-subtle text-primary fw-semibold px-3 py-2">
+          {{ hero.badgeKey | translate }}
+        </span>
+        <h1 class="display-5 fw-semibold mt-4">{{ hero.titleKey | translate }}</h1>
+        <p class="lead text-body-secondary mt-3">{{ hero.subtitleKey | translate }}</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn btn-primary btn-lg px-4" [routerLink]="hero.primaryCta.path">
+            {{ hero.primaryCta.labelKey | translate }}
+          </a>
+          <a class="btn btn-outline-primary btn-lg px-4" [routerLink]="hero.secondaryCta.path">
+            {{ hero.secondaryCta.labelKey | translate }}
+          </a>
+        </div>
+        <div class="stats d-flex flex-wrap gap-4 mt-5">
+          <div class="stat d-flex flex-column" *ngFor="let stat of stats">
+            <span class="value">{{ stat.value }}</span>
+            <span class="label text-body-secondary">{{ stat.labelKey | translate }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="hero-card position-relative">
+          <div class="floating-card shadow-sm bg-white rounded-4">
+            <div class="floating-card-inner">
+              <h3 class="h5 fw-semibold">{{ 'homepage.hero.card.title' | translate }}</h3>
+              <p class="mb-0 text-body-secondary">
+                {{ 'homepage.hero.card.description' | translate }}
+              </p>
+            </div>
+          </div>
+          <div class="floating-pill shadow-sm bg-primary text-white">
+            <span class="fw-semibold">{{ 'homepage.hero.pill.title' | translate }}</span>
+            <small class="d-block">{{ 'homepage.hero.pill.subtitle' | translate }}</small>
+          </div>
+          <div class="hero-gradient"></div>
+          <div class="hero-shape"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="highlights py-5 py-lg-6 bg-body-tertiary">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12">
+        <h2 class="section-title text-center mb-4">
+          {{ 'homepage.highlights.title' | translate }}
+        </h2>
+        <p class="section-subtitle text-center text-body-secondary mb-5">
+          {{ 'homepage.highlights.subtitle' | translate }}
+        </p>
+      </div>
+      <div class="col-12 col-lg-4" *ngFor="let highlight of highlights">
+        <div class="card h-100 border-0 shadow-sm rounded-4">
+          <div class="card-body p-4">
+            <div class="icon-wrap rounded-3 bg-primary text-white mb-4">
+              <i [class]="'bi ' + highlight.icon"></i>
+            </div>
+            <h3 class="h5 fw-semibold">{{ highlight.titleKey | translate }}</h3>
+            <p class="text-body-secondary mb-0">{{ highlight.descriptionKey | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services py-5 py-lg-6">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-12 col-lg-5">
+        <span class="overline text-uppercase fw-semibold text-primary">
+          {{ 'homepage.services.overline' | translate }}
+        </span>
+        <h2 class="section-title mt-3">
+          {{ 'homepage.services.title' | translate }}
+        </h2>
+        <p class="text-body-secondary mt-3">
+          {{ 'homepage.services.description' | translate }}
+        </p>
+        <a class="btn btn-outline-primary mt-4" routerLink="/services">
+          {{ 'homepage.services.button' | translate }}
+        </a>
+      </div>
+      <div class="col-12 col-lg-7">
+        <div class="row g-4">
+          <div class="col-12 col-md-6" *ngFor="let service of services">
+            <div class="service-card h-100 p-4 rounded-4 shadow-sm">
+              <h3 class="h5 fw-semibold mb-3">{{ service.titleKey | translate }}</h3>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold" *ngFor="let tag of service.tags">
+                  {{ tag | translate }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials py-5 py-lg-6 bg-body-tertiary">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12 text-center">
+        <h2 class="section-title mb-3">
+          {{ 'homepage.testimonials.title' | translate }}
+        </h2>
+        <p class="section-subtitle text-body-secondary mb-4">
+          {{ 'homepage.testimonials.subtitle' | translate }}
+        </p>
+      </div>
+      <div class="col-12 col-md-6" *ngFor="let testimonial of testimonials">
+        <div class="testimonial-card h-100 rounded-4 p-4 shadow-sm">
+          <p class="testimonial-quote mb-4">“{{ testimonial.quoteKey | translate }}”</p>
+          <div>
+            <span class="fw-semibold">{{ testimonial.authorKey | translate }}</span>
+            <small class="d-block text-body-secondary">{{ testimonial.roleKey | translate }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta py-5 py-lg-6">
+  <div class="container">
+    <div class="cta-card position-relative overflow-hidden rounded-4 border-0 shadow-sm">
+      <div class="row align-items-center gy-4 p-4 p-lg-5">
+        <div class="col-12 col-lg-8">
+          <h2 class="fw-semibold mb-3">{{ 'homepage.cta.title' | translate }}</h2>
+          <p class="text-body-secondary mb-0">{{ 'homepage.cta.description' | translate }}</p>
+        </div>
+        <div class="col-12 col-lg-4 text-lg-end">
+          <div class="d-flex flex-lg-column flex-wrap justify-content-center gap-3">
+            <a class="btn btn-primary btn-lg px-4" routerLink="/contact">
+              {{ 'homepage.cta.primary' | translate }}
+            </a>
+            <a class="btn btn-outline-light btn-lg px-4" routerLink="/portfolio">
+              {{ 'homepage.cta.secondary' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="cta-blur"></div>
+    </div>
+  </div>
+</section>
+

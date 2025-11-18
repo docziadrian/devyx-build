@@ -1,0 +1,22 @@
+<section class="notfound-wrapper d-flex align-items-center justify-content-center text-center">
+  <div class="content position-relative">
+    <div class="glow"></div>
+    <div class="code display-1 fw-bold">404</div>
+    <h1 class="title fw-semibold mt-4">{{ 'notfound.title' | translate }}</h1>
+    <p class="subtitle text-body-secondary mt-3">
+      {{ 'notfound.description' | translate }}
+    </p>
+    <div class="actions d-flex flex-wrap justify-content-center gap-3 mt-4">
+      <a class="btn btn-primary btn-lg px-4" routerLink="/">
+        {{ 'notfound.primaryCta' | translate }}
+      </a>
+      <a class="btn btn-outline-primary btn-lg px-4" routerLink="/contact">
+        {{ 'notfound.secondaryCta' | translate }}
+      </a>
+    </div>
+    <div class="hint mt-5 text-body-secondary d-flex align-items-center justify-content-center gap-2">
+      <i class="bi bi-search"></i>
+      <span>{{ 'notfound.hint' | translate }}</span>
+    </div>
+  </div>
+</section>

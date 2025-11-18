@@ -1,0 +1,34 @@
+<div class="loading-overlay" [class.loading-overlay--hidden]="!isVisible()">
+  <div class="loading-overlay__backdrop"></div>
+  <div class="loading-overlay__grid"></div>
+  <div class="loading-overlay__particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="loading-overlay__content">
+    <div class="loading-overlay__rings">
+      <span class="loading-overlay__ring loading-overlay__ring--outer"></span>
+      <span class="loading-overlay__ring loading-overlay__ring--middle"></span>
+      <span class="loading-overlay__ring loading-overlay__ring--inner"></span>
+    </div>
+
+    <div class="loading-overlay__core">
+      <div class="loading-overlay__logo">
+        <img src="/logo.png" alt="NovyxDev logo" />
+      </div>
+      <div class="loading-overlay__sonar"></div>
+    </div>
+
+    <div class="loading-overlay__progress">
+      <span class="loading-overlay__progress-track">
+        <span class="loading-overlay__progress-fill"></span>
+      </span>
+      <span class="loading-overlay__progress-glow"></span>
+    </div>
+  </div>
+</div>
+

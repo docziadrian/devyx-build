@@ -1,0 +1,331 @@
+@use 'sass:color';
+
+$deep-space: #0b1026;
+$nebula: #1a2a6c;
+$ion: #8f67ff;
+$pulse: #00e0ff;
+$flare: #fdbb2d;
+
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 2000;
+  pointer-events: auto;
+  transition: opacity 0.65s ease, visibility 0.65s ease;
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.loading-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(0, 224, 255, 0.2), transparent 35%),
+    radial-gradient(circle at 80% 15%, rgba(253, 187, 45, 0.25), transparent 45%),
+    radial-gradient(circle at center, rgba(11, 16, 38, 0.95), rgba(11, 16, 38, 1));
+  backdrop-filter: blur(24px);
+}
+
+.loading-overlay__grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 120px 120px;
+  mask-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.7), transparent 70%);
+  animation: gridDrift 12s linear infinite;
+}
+
+.loading-overlay__particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    --tx: 0.45;
+    --ty: 0.1;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: rgba(0, 224, 255, 0.6);
+    box-shadow: 0 0 12px rgba(0, 224, 255, 0.8);
+    animation: particleDrift 6s linear infinite;
+
+    &:nth-child(2) {
+      --tx: 0.8;
+      --ty: 0.2;
+      width: 3px;
+      height: 3px;
+      animation-duration: 7.5s;
+      animation-delay: -1.2s;
+    }
+
+    &:nth-child(3) {
+      --tx: 0.15;
+      --ty: 0.7;
+      width: 1.5px;
+      height: 1.5px;
+      animation-duration: 5.8s;
+      animation-delay: -2.1s;
+    }
+
+    &:nth-child(4) {
+      --tx: 0.65;
+      --ty: 1.15;
+      width: 2.8px;
+      height: 2.8px;
+      animation-duration: 8.6s;
+      animation-delay: -3.4s;
+    }
+
+    &:nth-child(5) {
+      --tx: 0.35;
+      --ty: 0.35;
+      width: 1.2px;
+      height: 1.2px;
+      animation-duration: 4.8s;
+      animation-delay: -0.8s;
+    }
+  }
+}
+
+.loading-overlay__content {
+  position: relative;
+  width: clamp(260px, 30vw, 380px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.loading-overlay__rings {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.loading-overlay__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(143, 103, 255, 0.18);
+  box-shadow: inset 0 0 35px rgba(143, 103, 255, 0.08);
+  animation: ringRotate 6.5s linear infinite;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    border-image: linear-gradient(120deg, rgba(253, 187, 45, 0.35), rgba(0, 224, 255, 0.15)) 1;
+    animation: ringGlow 3.2s ease-in-out infinite;
+  }
+
+  &--outer {
+    width: 100%;
+    height: 100%;
+    animation-duration: 11s;
+  }
+
+  &--middle {
+    width: 78%;
+    height: 78%;
+    animation-duration: 8s;
+    animation-direction: reverse;
+  }
+
+  &--inner {
+    width: 54%;
+    height: 54%;
+    animation-duration: 6.5s;
+    &::after {
+      animation-delay: 0.8s;
+    }
+  }
+}
+
+.loading-overlay__core {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 224, 255, 0.25), rgba(0, 224, 255, 0));
+  box-shadow: 0 0 70px rgba(0, 224, 255, 0.35);
+}
+
+.loading-overlay__logo {
+  width: 70%;
+  animation: floatLogo 3.6s ease-in-out infinite;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 40px rgba(0, 224, 255, 0.45));
+  }
+}
+
+.loading-overlay__sonar {
+  position: absolute;
+  inset: -25%;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 224, 255, 0.2);
+  animation: sonarPulse 4.5s ease-out infinite;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 40%;
+    border-radius: inherit;
+    border: 1px solid rgba(253, 187, 45, 0.4);
+    animation: sonarPulse 3.2s ease-out infinite;
+    animation-delay: 1.2s;
+  }
+}
+
+.loading-overlay__progress {
+  position: absolute;
+  bottom: 10%;
+  width: 70%;
+  display: grid;
+  place-items: center;
+  gap: 0.6rem;
+}
+
+.loading-overlay__progress-track {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  box-shadow: inset 0 0 12px rgba(143, 103, 255, 0.35);
+}
+
+.loading-overlay__progress-fill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(143, 103, 255, 0.8), rgba(0, 224, 255, 0.95), rgba(253, 187, 45, 0.85));
+  transform: translateX(-100%);
+  animation: progressFlow 4.2s cubic-bezier(0.6, 0.05, 0.15, 0.95) infinite;
+}
+
+.loading-overlay__progress-glow {
+  display: block;
+  width: 40%;
+  height: 4px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(0, 224, 255, 0.8), transparent 70%);
+  animation: glowPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes gridDrift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+
+  100% {
+    background-position: 120px 120px, 120px 120px;
+  }
+}
+
+@keyframes particleDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(calc((var(--tx, 1) - 0.5) * 480px), calc((var(--ty, 1) - 0.5) * 320px), 0) scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes ringRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ringGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+    filter: blur(0);
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+}
+
+@keyframes sonarPulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.65;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes floatLogo {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes progressFlow {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleX(0.6);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.1);
+  }
+}
+
+@media (max-width: 576px) {
+  .loading-overlay__content {
+    width: clamp(220px, 62vw, 280px);
+  }
+}
+

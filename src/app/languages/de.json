@@ -1,0 +1,254 @@
+{
+  "navbar": {
+    "brand": "NovyxDev",
+    "links": {
+      "home": "Startseite",
+      "services": "Leistungen",
+      "portfolio": "Referenzen",
+      "contact": "Kontakt",
+      "fivem": "FiveM Skripte",
+      "blog": "Blog"
+    },
+    "theme": {
+      "dark": "Dunkler Modus",
+      "light": "Heller Modus",
+      "switchToDark": "Zum dunklen Modus wechseln",
+      "switchToLight": "Zum hellen Modus wechseln"
+    },
+    "language": {
+      "selectLabel": "Sprache auswählen"
+    },
+    "notifications": {
+      "theme": {
+        "dark": {
+          "title": "Dunkler Modus aktiviert",
+          "description": "Die Oberfläche verwendet nun das dunkle Farbschema."
+        },
+        "light": {
+          "title": "Heller Modus aktiviert",
+          "description": "Die Oberfläche wurde auf das helle Farbschema zurückgesetzt."
+        }
+      },
+      "language": {
+        "title": "Sprache aktualisiert",
+        "description": "Die Anwendungssprache wurde erfolgreich geändert."
+      }
+    }
+  },
+  "footer": {
+    "description": "Innovative digitale Lösungen für Ihr Unternehmen.",
+    "quickLinks": {
+      "title": "Schnellzugriff"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "address": "Baja, Ungarn"
+    },
+    "bottom": "Alle Rechte vorbehalten."
+  },
+  "homepage": {
+    "hero": {
+      "badge": "Innovation · Technologie · Zusammenarbeit",
+      "title": "Digitale Lösungen, die Ihr Geschäft voranbringen",
+      "subtitle": "Individuelle Webanwendungen, maßgeschneiderte Entwicklungen und Integrationen mit agiler Exzellenz.",
+      "primaryCta": "Angebot anfordern",
+      "secondaryCta": "Referenzen ansehen",
+      "card": {
+        "title": "Individuelle Entwicklung",
+        "description": "Skalierbare Architekturen, moderne Frontends und stabile Backend-Lösungen."
+      },
+      "pill": {
+        "title": "Sprintbasierte Umsetzung",
+        "subtitle": "Transparente Statusberichte und messbare Ergebnisse."
+      }
+    },
+    "highlights": {
+      "title": "Warum wir?",
+      "subtitle": "Wir liefern geschäftsorientierte, technisch raffinierte Lösungen.",
+      "strategy": {
+        "title": "Strategie & Planung",
+        "description": "Wir definieren Fokus, Nutzererlebnis und Technologie basierend auf Ihren Geschäftszielen."
+      },
+      "agile": {
+        "title": "Agile Entwicklung",
+        "description": "Iterative Sprints mit kontinuierlichem Feedback und transparenter Kommunikation."
+      },
+      "operations": {
+        "title": "Nachhaltiger Betrieb",
+        "description": "Moderne Infrastruktur, Monitoring und Support für zuverlässige Systeme."
+      }
+    },
+    "services": {
+      "overline": "Unsere Leistungen",
+      "title": "Geschäftlicher Mehrwert, gestützt von Technologie",
+      "description": "Wir schaffen Erlebnisse für Ihre Nutzer und Effizienz für Ihr Team – von der Analyse bis zur Wartung.",
+      "button": "Leistungen entdecken",
+      "items": {
+        "webdev": {
+          "title": "Webanwendungs-entwicklung",
+          "tags": {
+            "angular": "Angular",
+            "nestjs": "NestJS",
+            "node": "Node.js",
+            "rest": "REST",
+            "graphql": "GraphQL"
+          }
+        },
+        "uxui": {
+          "title": "UX/UI Design",
+          "tags": {
+            "designSystem": "Design System",
+            "wireframe": "Wireframe",
+            "prototype": "Prototyp",
+            "figma": "Figma"
+          }
+        },
+        "integrations": {
+          "title": "Integrationen und Automatisierung",
+          "tags": {
+            "erp": "ERP",
+            "crm": "CRM",
+            "thirdPartyApi": "Drittanbieter-API",
+            "workflow": "Workflow"
+          }
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Stimmen unserer Kunden",
+      "subtitle": "Langfristige Partnerschaften und messbare Ergebnisse.",
+      "items": {
+        "first": {
+          "quote": "Das NovyxDev-Team begleitete uns als Partner in jeder Phase, und das Ergebnis übertraf die Erwartungen.",
+          "author": "Dóra Kiss",
+          "role": "Geschäftsführerin, FutureLine GmbH"
+        },
+        "second": {
+          "quote": "Schnelle Reaktion, transparenter Prozess und echter Geschäftswert. Sehr empfehlenswert.",
+          "author": "Péter Molnár",
+          "role": "CTO, InnoWave"
+        }
+      }
+    },
+    "stats": {
+      "projects": "erfolgreiche Projekte",
+      "experience": "Jahre Erfahrung",
+      "satisfaction": "Kundenzufriedenheit"
+    },
+    "cta": {
+      "title": "Lassen Sie uns Ihr nächstes Projekt planen!",
+      "description": "Wir analysieren Ihre Anforderungen, entwerfen die Technologie und begleiten Sie bis zur Umsetzung.",
+      "primary": "Kontakt aufnehmen",
+      "secondary": "Projekte ansehen"
+    }
+  },
+  "fivem": {
+    "filter": {
+      "title": "Filtereinstellungen",
+      "close": "Schließen",
+      "currency": {
+        "label": "Währung"
+      },
+      "priceRange": {
+        "label": "Preisspanne",
+        "reset": "Zurücksetzen",
+        "min": "Minimum",
+        "max": "Maximum"
+      },
+      "search": {
+        "label": "Suche",
+        "placeholder": "Suche nach Stichwort, Kategorie oder Beschreibung"
+      },
+      "exchange": {
+        "title": "Wechselkurse",
+        "description": "Preise sind standardmäßig in Euro angegeben. Passe die Wechselkurse an deine bevorzugte Währung an."
+      },
+      "summary": {
+        "currency": "Aktive Währung",
+        "range": "Preisspanne",
+        "results": "Ergebnisse",
+        "frameworkBreakdown": "Ergebnisse nach Framework"
+      }
+    },
+    "refSite": {
+      "filterButton": "Filter",
+      "framework": {
+        "all": "Alle"
+      },
+      "resultsLabel": "Ergebnisse",
+      "details": "Details",
+      "noDocumentation": "Kontaktiere uns für Details!",
+      "noResults": "Keine Ressourcen entsprechen den ausgewählten Filtern."
+    },
+    "refEsx": {
+      "badge": "FiveM · ESX",
+      "title": "ESX Framework-Referenzen",
+      "subtitle": "Unten siehst du nur ESX-Ressourcen, die den aktuellen Filtern entsprechen.",
+      "noResults": "Keine ESX-Ressourcen erfüllen diese Filter. Passe die Einstellungen im Filterpanel an."
+    },
+    "refQbcore": {
+      "badge": "FiveM · QBCore",
+      "title": "QBCore Framework-Referenzen",
+      "subtitle": "Hier findest du QBCore-Lösungen, die den aktuellen Filtern entsprechen.",
+      "noResults": "Keine QBCore-Ressourcen erfüllen diese Filter. Versuche, die Filter anzupassen."
+    },
+    "resources": {
+      "heistManager": {
+        "description": "Umfangreiches Raubmanagement-System mit mehreren Phasen und dynamischen Ereignissen."
+      },
+      "vehicleKeychain": {
+        "description": "Erweitertes Fahrzeugschlüssel-Management mit Mobile-App-Integration und Sicherheitsstufen."
+      },
+      "qbcoreBilling": {
+        "description": "Modulares Abrechnungssystem mit Unterstützung für mehrere Unternehmen und detaillierten Auswertungen."
+      },
+      "dispatchAi": {
+        "description": "KI-gestützte Leitstelle mit Echtzeitstatistiken und Auswertungen."
+      },
+      "legacyInventory": {
+        "description": "Modernes Inventar-UI für ESX Legacy Server mit Drag-&-Drop-Unterstützung."
+      },
+      "qbcoreHud": {
+        "description": "Responsives Spieler-HUD mit modularen Panels und API-Integrationen."
+      },
+      "fivemMarketplace": {
+        "description": "Händler- und Auktionssystem mit dynamischer Preisgestaltung und Bestandsüberwachung."
+      },
+      "legacyGangwars": {
+        "description": "Fraktionsbasiertes Gebietskontrollsystem mit detaillierten Statistiken und Rangverwaltung."
+      },
+      "qbcoreCareers": {
+        "description": "Dynamisches Karrieresystem mit Fortschrittsbäumen und Belohnungen."
+      }
+    }
+  },
+  "notfound": {
+    "title": "Sie scheinen vom Weg abgekommen zu sein",
+    "description": "Die gesuchte Seite wurde nicht gefunden oder verschoben. Wir helfen Ihnen, zurückzufinden.",
+    "primaryCta": "Zur Startseite",
+    "secondaryCta": "Kontakt aufnehmen",
+    "hint": "Nutzen Sie das Hauptmenü oder die Suche, um den gewünschten Inhalt zu finden."
+  },
+  "notifications": {
+    "close": "Benachrichtigung schließen",
+    "demo": {
+      "success": {
+        "title": "Erfolgreich gespeichert",
+        "description": "Ihre Änderungen wurden sicher gespeichert."
+      },
+      "info": {
+        "title": "Aktualisierung verfügbar",
+        "description": "Neue Funktionen sind jetzt im Dashboard verfügbar."
+      },
+      "warning": {
+        "title": "Achtung",
+        "description": "90 % Ihres Speicherplatzes sind bereits belegt."
+      },
+      "error": {
+        "title": "Es ist ein Fehler aufgetreten",
+        "description": "Der Server konnte nicht erreicht werden. Bitte versuchen Sie es später erneut."
+      }
+    }
+  }
+}
+

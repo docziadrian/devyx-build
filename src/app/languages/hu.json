@@ -1,0 +1,255 @@
+
+{
+  "navbar": {
+    "brand": "NovyxDev",
+    "links": {
+      "home": "Főoldal",
+      "services": "Szolgáltatások",
+      "portfolio": "Referenciák",
+      "contact": "Kapcsolat",
+      "fivem": "FiveM Szkriptek",
+      "blog": "Blog"
+    },
+    "theme": {
+      "dark": "Sötét mód",
+      "light": "Világos mód",
+      "switchToDark": "Kapcsold sötét módra",
+      "switchToLight": "Kapcsold világos módra"
+    },
+    "language": {
+      "selectLabel": "Nyelv kiválasztása"
+    },
+    "notifications": {
+      "theme": {
+        "dark": {
+          "title": "Sötét mód bekapcsolva",
+          "description": "A felület a továbbiakban sötét színsémát használ."
+        },
+        "light": {
+          "title": "Világos mód bekapcsolva",
+          "description": "A felület visszaváltott világos színsémára."
+        }
+      },
+      "language": {
+        "title": "Nyelv frissítve",
+        "description": "Az alkalmazás nyelve sikeresen módosult."
+      }
+    }
+  },
+  "footer": {
+    "description": "Innovatív digitális megoldások fejlesztése vállalkozások számára.",
+    "quickLinks": {
+      "title": "Gyors elérés"
+    },
+    "contact": {
+      "title": "Kapcsolat",
+      "address": "Baja, Magyarország"
+    },
+    "bottom": "Minden jog fenntartva."
+  },
+  "homepage": {
+    "hero": {
+      "badge": "Innováció · Technológia · Együttműködés",
+      "title": "Digitális megoldások, amelyek vállalkozásodat előre viszik",
+      "subtitle": "Testreszabott webes alkalmazások, egyedi fejlesztések és integrációk magas minőségben, agilis megközelítéssel.",
+      "primaryCta": "Ajánlatkérés",
+      "secondaryCta": "Referenciák",
+      "card": {
+        "title": "Egyedi fejlesztés",
+        "description": "Skálázható architektúrák, modern frontend és stabil backend megoldások."
+      },
+      "pill": {
+        "title": "Sprint alapú fejlesztés",
+        "subtitle": "Transzparens státuszjelentések és mérhető eredmények."
+      }
+    },
+    "highlights": {
+      "title": "Miért válassz minket?",
+      "subtitle": "Üzleti célokra hangolt, technológiailag kifinomult megoldásokat szállítunk.",
+      "strategy": {
+        "title": "Stratégia és tervezés",
+        "description": "Üzleti céljaid alapján meghatározzuk a projekt fókuszát, felhasználói élményt és technológiai keretrendszert."
+      },
+      "agile": {
+        "title": "Agilis fejlesztés",
+        "description": "Iteratív fejlesztési ciklusokkal, folyamatos visszajelzéssel és transzparens kommunikációval dolgozunk."
+      },
+      "operations": {
+        "title": "Fenntartható üzemeltetés",
+        "description": "Modern infrastruktúra, monitorozás és támogatás, hogy a rendszered megbízhatóan működjön hosszú távon is."
+      }
+    },
+    "services": {
+      "overline": "Szolgáltatásaink",
+      "title": "Üzleti érték, technológiai erőforrásokkal megtámogatva",
+      "description": "Célunk, hogy a felhasználók számára élményt, a csapatod számára pedig hatékonyságot biztosítsunk. Teljes körű megoldást adunk a felméréstől a karbantartásig.",
+      "button": "Szolgáltatások részletei",
+      "items": {
+        "webdev": {
+          "title": "Webes alkalmazás fejlesztés",
+          "tags": {
+            "angular": "Angular",
+            "nestjs": "NestJS",
+            "node": "Node.js",
+            "rest": "REST",
+            "graphql": "GraphQL"
+          }
+        },
+        "uxui": {
+          "title": "UX/UI tervezés",
+          "tags": {
+            "designSystem": "Design system",
+            "wireframe": "Drótváz",
+            "prototype": "Prototípus",
+            "figma": "Figma"
+          }
+        },
+        "integrations": {
+          "title": "Integrációk és automatizáció",
+          "tags": {
+            "erp": "ERP",
+            "crm": "CRM",
+            "thirdPartyApi": "Külső API",
+            "workflow": "Folyamatautomatizálás"
+          }
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Ügyfeleink mondták",
+      "subtitle": "Hosszú távú partnerségek és kézzelfogható eredmények.",
+      "items": {
+        "first": {
+          "quote": "A NovyxDev csapata minden szakaszban partnerként tekintett ránk, a végeredmény pedig a vártnál is jobb lett.",
+          "author": "Kiss Dóra",
+          "role": "Ügyvezető, FutureLine Kft."
+        },
+        "second": {
+          "quote": "Gyors reakcióidő, átlátható fejlesztési folyamat és valódi üzleti érték. Szívből ajánlom.",
+          "author": "Molnár Péter",
+          "role": "CTO, InnoWave"
+        }
+      }
+    },
+    "stats": {
+      "projects": "sikeres projekt",
+      "experience": "éves tapasztalat",
+      "satisfaction": "ügyfélelégedettség"
+    },
+    "cta": {
+      "title": "Lépjünk kapcsolatba és tervezzük meg következő projekted!",
+      "description": "Segítünk felmérni az igényeket, megtervezzük a technológiai megoldást és végigkísérünk a megvalósításig.",
+      "primary": "Kapcsolatfelvétel",
+      "secondary": "Projektek megtekintése"
+    }
+  },
+  "fivem": {
+    "filter": {
+      "title": "Szűrő beállítások",
+      "close": "Bezár",
+      "currency": {
+        "label": "Pénznem"
+      },
+      "priceRange": {
+        "label": "Ár tartomány",
+        "reset": "Visszaállítás",
+        "min": "Minimum",
+        "max": "Maximum"
+      },
+      "search": {
+        "label": "Keresés",
+        "placeholder": "Kulcsszó, kategória vagy leírás alapján"
+      },
+      "exchange": {
+        "title": "Átváltási arányok",
+        "description": "A díjak alapértelmezetten euróban vannak megadva. Itt módosíthatod az átváltási arányokat a kívánt deviza szerint."
+      },
+      "summary": {
+        "currency": "Aktív pénznem",
+        "range": "Ár intervallum",
+        "results": "Találatok",
+        "frameworkBreakdown": "Találatok keretrendszerenként"
+      }
+    },
+    "refSite": {
+      "filterButton": "Szűrő",
+      "framework": {
+        "all": "Mind"
+      },
+      "resultsLabel": "Találatok",
+      "details": "Részletek",
+      "noDocumentation": "Kapcsolatért érdeklődj!",
+      "noResults": "Nincs a megadott szűrőfeltételeknek megfelelő erőforrás."
+    },
+    "refEsx": {
+      "badge": "FiveM · ESX",
+      "title": "ESX keretrendszer referenciák",
+      "subtitle": "A lenti lista csak az aktuális szűrőfeltételeknek megfelelő ESX erőforrásokat tartalmazza.",
+      "noResults": "Nincs a szűrőfeltételeknek megfelelő ESX erőforrás. Módosítsd a beállításokat a szűrőpanelen."
+    },
+    "refQbcore": {
+      "badge": "FiveM · QBCore",
+      "title": "QBCore keretrendszer referenciák",
+      "subtitle": "Az aktuális szűrőfeltételeknek megfelelő QBCore megoldásokat találod itt.",
+      "noResults": "Jelenleg nincs a szűrőfeltételeknek megfelelő QBCore erőforrás. Próbáld meg módosítani a szűrőket."
+    },
+    "resources": {
+      "heistManager": {
+        "description": "Összetett rablás menedzsment rendszer több fázissal és dinamikus eseményekkel."
+      },
+      "vehicleKeychain": {
+        "description": "Fejlett jármű kulcskezelés mobil app integrációval és biztonsági szintekkel."
+      },
+      "qbcoreBilling": {
+        "description": "Moduláris számlázó rendszer több vállalkozás támogatással és részletes kimutatásokkal."
+      },
+      "dispatchAi": {
+        "description": "Mesterséges intelligenciával támogatott mentésirányítás valós idejű statisztikákkal."
+      },
+      "legacyInventory": {
+        "description": "Modern inventory felület ESX Legacy szerverekhez drag & drop támogatással."
+      },
+      "qbcoreHud": {
+        "description": "Reszponzív játékos HUD moduláris panelekkel és API integrációval."
+      },
+      "fivemMarketplace": {
+        "description": "Kereskedői és aukciós rendszer dinamikus árazással és készletfigyeléssel."
+      },
+      "legacyGangwars": {
+        "description": "Frakció alapú területfoglaló rendszer részletes statisztikákkal és rangokkal."
+      },
+      "qbcoreCareers": {
+        "description": "Dinamikus karrier rendszer előrehaladási fával és jutalmazással."
+      }
+    }
+  },
+  "notfound": {
+    "title": "Úgy tűnik, eltévedtél",
+    "description": "A keresett oldal nem található, vagy időközben áthelyeztük. Ne aggódj, segítünk visszatalálni.",
+    "primaryCta": "Vissza a főoldalra",
+    "secondaryCta": "Vedd fel velünk a kapcsolatot",
+    "hint": "Használhatod a főmenüt vagy a keresőt is, hogy megtaláld amit keresel."
+  },
+  "notifications": {
+    "close": "Értesítés bezárása",
+    "demo": {
+      "success": {
+        "title": "Sikeres mentés",
+        "description": "A módosításaidat biztonságosan elmentettük."
+      },
+      "info": {
+        "title": "Frissítés érhető el",
+        "description": "Új funkciók váltak elérhetővé a vezérlőpultban."
+      },
+      "warning": {
+        "title": "Figyelmeztetés",
+        "description": "A tárhelyed 90%-a felhasználásra került."
+      },
+      "error": {
+        "title": "Hiba történt",
+        "description": "Nem sikerült csatlakozni a kiszolgálóhoz. Próbáld újra később."
+      }
+    }
+  }
+}
+

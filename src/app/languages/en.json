@@ -1,0 +1,254 @@
+{
+  "navbar": {
+    "brand": "NovyxDev",
+    "links": {
+      "home": "Home",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "contact": "Contact",
+      "fivem": "FiveM Scripts",
+      "blog": "Blog"
+    },
+    "theme": {
+      "dark": "Dark mode",
+      "light": "Light mode",
+      "switchToDark": "Switch to dark mode",
+      "switchToLight": "Switch to light mode"
+    },
+    "language": {
+      "selectLabel": "Select language"
+    },
+    "notifications": {
+      "theme": {
+        "dark": {
+          "title": "Dark mode enabled",
+          "description": "The interface now uses the dark color palette."
+        },
+        "light": {
+          "title": "Light mode enabled",
+          "description": "The interface reverted to the light theme."
+        }
+      },
+      "language": {
+        "title": "Language updated",
+        "description": "The application language has been changed successfully."
+      }
+    }
+  },
+  "footer": {
+    "description": "Innovative digital solutions tailored for your business.",
+    "quickLinks": {
+      "title": "Quick links"
+    },
+    "contact": {
+      "title": "Contact",
+      "address": "Baja, Hungary"
+    },
+    "bottom": "All rights reserved."
+  },
+  "homepage": {
+    "hero": {
+      "badge": "Innovation · Technology · Collaboration",
+      "title": "Digital solutions that move your business forward",
+      "subtitle": "Custom web applications, tailored development and integrations delivered with agile excellence.",
+      "primaryCta": "Request a quote",
+      "secondaryCta": "View portfolio",
+      "card": {
+        "title": "Custom development",
+        "description": "Scalable architectures, modern frontends and reliable backend solutions."
+      },
+      "pill": {
+        "title": "Sprint-based delivery",
+        "subtitle": "Transparent status updates and measurable results."
+      }
+    },
+    "highlights": {
+      "title": "Why choose us?",
+      "subtitle": "We deliver business-focused, technically refined solutions.",
+      "strategy": {
+        "title": "Strategy & planning",
+        "description": "We define project focus, user experience and tech stack based on your business goals."
+      },
+      "agile": {
+        "title": "Agile development",
+        "description": "Iterative sprints with constant feedback and transparent communication."
+      },
+      "operations": {
+        "title": "Sustainable operations",
+        "description": "Modern infrastructure, monitoring and support to keep your system reliable."
+      }
+    },
+    "services": {
+      "overline": "Our services",
+      "title": "Business value, powered by technology",
+      "description": "We deliver experiences for your users and efficiency for your team, from discovery to maintenance.",
+      "button": "Discover services",
+      "items": {
+        "webdev": {
+          "title": "Web application development",
+          "tags": {
+            "angular": "Angular",
+            "nestjs": "NestJS",
+            "node": "Node.js",
+            "rest": "REST",
+            "graphql": "GraphQL"
+          }
+        },
+        "uxui": {
+          "title": "UX/UI design",
+          "tags": {
+            "designSystem": "Design system",
+            "wireframe": "Wireframe",
+            "prototype": "Prototype",
+            "figma": "Figma"
+          }
+        },
+        "integrations": {
+          "title": "Integrations and automation",
+          "tags": {
+            "erp": "ERP",
+            "crm": "CRM",
+            "thirdPartyApi": "3rd party API",
+            "workflow": "Workflow"
+          }
+        }
+      }
+    },
+    "testimonials": {
+      "title": "What our clients say",
+      "subtitle": "Long-term partnerships and measurable outcomes.",
+      "items": {
+        "first": {
+          "quote": "The NovyxDev team treated us like partners at every stage, and the result exceeded expectations.",
+          "author": "Dóra Kiss",
+          "role": "CEO, FutureLine Ltd."
+        },
+        "second": {
+          "quote": "Fast response, transparent process and real business value. Highly recommended.",
+          "author": "Péter Molnár",
+          "role": "CTO, InnoWave"
+        }
+      }
+    },
+    "stats": {
+      "projects": "successful projects",
+      "experience": "years experience",
+      "satisfaction": "client satisfaction"
+    },
+    "cta": {
+      "title": "Let’s connect and plan your next project!",
+      "description": "We’ll assess your needs, design the technology and guide you through delivery.",
+      "primary": "Contact us",
+      "secondary": "Explore projects"
+    }
+  },
+  "fivem": {
+    "filter": {
+      "title": "Filter settings",
+      "close": "Close",
+      "currency": {
+        "label": "Currency"
+      },
+      "priceRange": {
+        "label": "Price range",
+        "reset": "Reset",
+        "min": "Minimum",
+        "max": "Maximum"
+      },
+      "search": {
+        "label": "Search",
+        "placeholder": "Search by keyword, category or description"
+      },
+      "exchange": {
+        "title": "Exchange rates",
+        "description": "Prices are defined in euros by default. Adjust the conversion rates to match your preferred currency."
+      },
+      "summary": {
+        "currency": "Active currency",
+        "range": "Price range",
+        "results": "Results",
+        "frameworkBreakdown": "Results by framework"
+      }
+    },
+    "refSite": {
+      "filterButton": "Filter",
+      "framework": {
+        "all": "All"
+      },
+      "resultsLabel": "Results",
+      "details": "Details",
+      "noDocumentation": "Contact us for details!",
+      "noResults": "No resources match the selected filters."
+    },
+    "refEsx": {
+      "badge": "FiveM · ESX",
+      "title": "ESX framework references",
+      "subtitle": "Only ESX resources that match the current filters are listed below.",
+      "noResults": "No ESX resources match these filters. Adjust the settings in the filter panel."
+    },
+    "refQbcore": {
+      "badge": "FiveM · QBCore",
+      "title": "QBCore framework references",
+      "subtitle": "Browse QBCore solutions that match the current filters.",
+      "noResults": "No QBCore resources match these filters. Try adjusting the filters."
+    },
+    "resources": {
+      "heistManager": {
+        "description": "Advanced heist management system with multiple phases and dynamic events."
+      },
+      "vehicleKeychain": {
+        "description": "Advanced vehicle key management with mobile app integration and security levels."
+      },
+      "qbcoreBilling": {
+        "description": "Modular billing platform with multi-business support and detailed reporting."
+      },
+      "dispatchAi": {
+        "description": "AI-assisted dispatch control with real-time statistics and insights."
+      },
+      "legacyInventory": {
+        "description": "Modern inventory UI for ESX Legacy servers with drag & drop support."
+      },
+      "qbcoreHud": {
+        "description": "Responsive player HUD with modular panels and API integrations."
+      },
+      "fivemMarketplace": {
+        "description": "Marketplace and auction system featuring dynamic pricing and stock monitoring."
+      },
+      "legacyGangwars": {
+        "description": "Faction-based territory control system with detailed stats and rank tracking."
+      },
+      "qbcoreCareers": {
+        "description": "Dynamic career progression system with skill trees and reward paths."
+      }
+    }
+  },
+  "notfound": {
+    "title": "Looks like you are lost",
+    "description": "We couldn’t find the page you were looking for. Don’t worry, we’ll help you get back on track.",
+    "primaryCta": "Return to homepage",
+    "secondaryCta": "Get in touch with us",
+    "hint": "Try navigating from the main menu or use the search to find what you need."
+  },
+  "notifications": {
+    "close": "Dismiss notification",
+    "demo": {
+      "success": {
+        "title": "Saved successfully",
+        "description": "Your changes have been stored securely."
+      },
+      "info": {
+        "title": "Update available",
+        "description": "New features are now available in the dashboard."
+      },
+      "warning": {
+        "title": "Heads up",
+        "description": "You have used 90% of your storage capacity."
+      },
+      "error": {
+        "title": "Something went wrong",
+        "description": "We couldn’t reach the server. Please try again later."
+      }
+    }
+  }
+}
+

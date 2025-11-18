@@ -1,0 +1,103 @@
+<section class="ref-site">
+  <div class="ref-site__topbar">
+    <div class="ref-site__topbar-left">
+      <button type="button" class="btn btn-outline-primary ref-site__filter-toggle" (click)="toggleFilter()">
+        <i class="bi bi-funnel-fill me-2"></i>
+        {{ 'fivem.refSite.filterButton' | translate }}
+      </button>
+      <div class="ref-site__framework-switch">
+        <button
+          type="button"
+          class="btn btn-light ref-site__framework-pill"
+          [class.active]="selectedFrameworks().length === frameworks.length"
+          (click)="showAllFrameworks()"
+        >
+          {{ 'fivem.refSite.framework.all' | translate }}
+        </button>
+        <button
+          type="button"
+          class="btn btn-light ref-site__framework-pill"
+          *ngFor="let framework of frameworks"
+          [class.active]="isFrameworkSelected(framework)"
+          (click)="toggleFramework(framework)"
+        >
+          {{ framework }}
+        </button>
+      </div>
+    </div>
+    <div class="ref-site__topbar-right">
+      <span class="ref-site__results-count">
+        {{ 'fivem.refSite.resultsLabel' | translate }}: <strong>{{ totalResults() }}</strong>
+      </span>
+      <span class="ref-site__currency-badge">
+        {{ currency() }}
+      </span>
+    </div>
+  </div>
+
+  <div class="ref-site__exchange">
+    <span class="ref-site__exchange-item" *ngFor="let entry of exchangeRateEntries()">
+      <span class="label">1 € =</span>
+      <span class="value">{{ entry[1] | number: '1.0-2' }}</span>
+      <span class="code">{{ entry[0] }}</span>
+    </span>
+  </div>
+
+  <div class="ref-site__layout">
+    <aside class="ref-site__filter" [class.is-open]="filterOpen()">
+      <div class="ref-site__filter-header d-flex d-lg-none justify-content-between align-items-center">
+        <span class="fw-semibold">{{ 'fivem.filter.title' | translate }}</span>
+        <button type="button" class="btn btn-outline-secondary btn-sm" (click)="toggleFilter()">
+          {{ 'fivem.filter.close' | translate }} <i class="bi bi-x-lg ms-1"></i>
+        </button>
+      </div>
+      <app-ref-filter></app-ref-filter>
+    </aside>
+
+    <div class="ref-site__content">
+      <div class="ref-site__cards" *ngIf="filteredResources().length; else noResults">
+        <article class="ref-site__card" *ngFor="let resource of filteredResources(); trackBy: trackByResourceId">
+          <div class="ref-site__card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+              <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold">
+                {{ resource.framework }}
+              </span>
+              <span class="badge rounded-pill bg-light text-body-secondary fw-semibold">
+                {{ resource.category }}
+              </span>
+            </div>
+            <h2 class="h5 fw-semibold mb-2">{{ resource.title }}</h2>
+            <p class="text-body-secondary mb-3">
+              {{ resource.descriptionKey ? (resource.descriptionKey | translate) : resource.description }}
+            </p>
+            <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+              <span class="ref-site__price">{{ getPrice(resource) }}</span>
+              <a
+                *ngIf="resource.documentationUrl; else contactCta"
+                class="btn btn-outline-primary btn-sm"
+                [href]="resource.documentationUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {{ 'fivem.refSite.details' | translate }}
+              </a>
+              <ng-template #contactCta>
+                <span class="text-body-secondary small fw-semibold">
+                  {{ 'fivem.refSite.noDocumentation' | translate }}
+                </span>
+              </ng-template>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="ref-site__overlay d-lg-none" *ngIf="filterOpen()" (click)="toggleFilter()"></div>
+</section>
+
+<ng-template #noResults>
+  <div class="alert alert-info" role="alert">
+    {{ 'fivem.refSite.noResults' | translate }}
+  </div>
+</ng-template>

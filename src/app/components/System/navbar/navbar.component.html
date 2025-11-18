@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img src="logo.png" alt="Logo" class="navbar-brand-logo mr-2" width="30" height="24">
+    <a class="navbar-brand" routerLink="/">{{ 'navbar.brand' | translate }}</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-inner d-flex flex-column flex-lg-row align-items-lg-center w-100 gap-3 gap-lg-0">
+        <ul class="navbar-nav nav-links mx-lg-auto">
+          <li class="nav-item" *ngFor="let item of navItems">
+            <a class="nav-link" [routerLink]="item.path" routerLinkActive="active">
+              {{ item.labelKey | translate }}
+            </a>
+          </li>
+        </ul>
+        <div class="navbar-actions ms-lg-4 mt-2 mt-lg-0 d-flex align-items-center justify-content-center justify-content-lg-end gap-3">
+          <button
+            type="button"
+            class="btn btn-outline-primary theme-toggle d-flex align-items-center gap-2"
+            (click)="toggleTheme()"
+            [attr.aria-pressed]="isDarkMode"
+            [attr.aria-label]="(isDarkMode ? 'navbar.theme.switchToLight' : 'navbar.theme.switchToDark') | translate"
+          >
+            <i class="bi" [class.bi-sun-fill]="isDarkMode" [class.bi-moon-stars]="!isDarkMode"></i>
+            <span class="d-none d-md-inline">
+              {{ (isDarkMode ? 'navbar.theme.light' : 'navbar.theme.dark') | translate }}
+            </span>
+          </button>
+          <div class="language-select position-relative" (click)="$event.stopPropagation()">
+            <button
+              type="button"
+              class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2"
+              (click)="toggleLanguageMenu()"
+              [attr.aria-expanded]="languageMenuOpen"
+              aria-haspopup="listbox"
+              [attr.aria-label]="'navbar.language.selectLabel' | translate"
+            >
+              <i class="bi bi-translate"></i>
+              <span>{{ selectedLanguage.label }}</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" [class.show]="languageMenuOpen" role="listbox">
+              <li *ngFor="let language of languages">
+                <button
+                  type="button"
+                  class="dropdown-item d-flex justify-content-between align-items-center"
+                  (click)="setLanguage(language.code)"
+                  [attr.aria-selected]="selectedLanguage.code === language.code"
+                >
+                  {{ language.label }}
+                  <i class="bi bi-check" *ngIf="selectedLanguage.code === language.code"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

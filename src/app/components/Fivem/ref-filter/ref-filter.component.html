@@ -1,0 +1,127 @@
+<section class="filter-panel">
+  <div class="filter-card">
+    <h2 class="h5 fw-semibold mb-4">{{ 'fivem.filter.title' | translate }}</h2>
+    <form [formGroup]="filterForm" class="filter-form">
+      <div class="filter-form__group">
+        <label class="form-label fw-semibold">{{ 'fivem.filter.currency.label' | translate }}</label>
+        <div class="btn-group flex-wrap" role="group">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            [class.active]="filterState().currency === option"
+            *ngFor="let option of currencyOptions"
+            (click)="setCurrency(option)"
+          >
+            {{ option }}
+          </button>
+        </div>
+      </div>
+
+      <div class="filter-form__group">
+        <label class="form-label fw-semibold d-flex justify-content-between">
+          <span>
+            {{ 'fivem.filter.priceRange.label' | translate }}
+            ({{ filterState().currency }})
+          </span>
+          <button type="button" class="btn btn-link btn-sm p-0" (click)="clearPriceRange()">
+            {{ 'fivem.filter.priceRange.reset' | translate }}
+          </button>
+        </label>
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label class="form-label text-body-secondary small">
+              {{ 'fivem.filter.priceRange.min' | translate }}
+            </label>
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              formControlName="minPrice"
+              placeholder="Nincs megadva"
+            />
+          </div>
+          <div class="col-12 col-md-6">
+            <label class="form-label text-body-secondary small">
+              {{ 'fivem.filter.priceRange.max' | translate }}
+            </label>
+            <input
+              type="number"
+              min="0"
+              class="form-control"
+              formControlName="maxPrice"
+              placeholder="Nincs megadva"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-form__group">
+        <label class="form-label fw-semibold">{{ 'fivem.filter.search.label' | translate }}</label>
+        <input
+          type="search"
+          class="form-control"
+          formControlName="searchTerm"
+          [placeholder]="'fivem.filter.search.placeholder' | translate"
+        />
+      </div>
+    </form>
+  </div>
+
+  <div class="exchange-card">
+    <h2 class="h5 fw-semibold mb-3">{{ 'fivem.filter.exchange.title' | translate }}</h2>
+    <p class="text-body-secondary mb-4">
+      {{ 'fivem.filter.exchange.description' | translate }}
+    </p>
+
+    <div class="exchange-card__rate" *ngFor="let option of currencyOptions">
+      <div class="exchange-card__label">1 € =</div>
+      <input
+        type="number"
+        min="0.01"
+        step="0.01"
+        class="form-control form-control-lg"
+        [value]="exchangeRates()[option]"
+        (input)="onExchangeRateChange(option, $any($event.target).value)"
+        disabled
+      />
+      <span class="exchange-card__suffix">{{ option }}</span>
+    </div>
+
+    <div class="filter-summary mt-4">
+      <div class="filter-summary__item">
+        <span class="filter-summary__label">{{ 'fivem.filter.summary.currency' | translate }}</span>
+        <span class="filter-summary__value">{{ filterState().currency }}</span>
+      </div>
+      <div class="filter-summary__item">
+        <span class="filter-summary__label">{{ 'fivem.filter.summary.range' | translate }}</span>
+        <span class="filter-summary__value">
+          <ng-container *ngIf="filterState().minPrice !== null; else noMin">
+            {{ filterState().minPrice | number : '1.0-0' }}
+          </ng-container>
+          -
+          <ng-container *ngIf="filterState().maxPrice !== null; else noMax">
+            {{ filterState().maxPrice | number : '1.0-0' }}
+          </ng-container>
+        </span>
+      </div>
+      <div class="filter-summary__item">
+        <span class="filter-summary__label">{{ 'fivem.filter.summary.results' | translate }}</span>
+        <span class="filter-summary__value">{{ totalMatches() }}</span>
+      </div>
+    </div>
+
+    <div class="filter-summary__frameworks mt-3" *ngIf="filteredCounts().length">
+      <span class="filter-summary__label d-block mb-2">
+        {{ 'fivem.filter.summary.frameworkBreakdown' | translate }}
+      </span>
+      <div class="d-flex flex-wrap gap-2">
+        <span class="badge rounded-pill bg-primary-subtle text-primary fw-semibold" *ngFor="let item of filteredCounts()">
+          {{ item[0] }} · {{ item[1] }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<ng-template #noMin>0</ng-template>
+<ng-template #noMax>∞</ng-template>

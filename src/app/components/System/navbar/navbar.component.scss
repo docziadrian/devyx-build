@@ -1,0 +1,115 @@
+
+:host {
+  display: block;
+}
+
+.navbar-inner {
+  width: 100%;
+}
+
+.navbar-nav.nav-links {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.navbar-nav.nav-links .nav-item {
+  margin: 0 0.5rem;
+}
+
+.navbar-nav.nav-links .nav-link {
+  position: relative;
+  font-weight: 500;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  overflow: hidden;
+  color: var(--bs-body-color);
+  transition: color 0.25s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: auto 10% 0;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--bs-primary), rgba(var(--bs-primary-rgb), 0.3));
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover,
+  &.active,
+  &.router-link-active {
+    color: var(--bs-primary);
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.navbar-actions {
+  min-width: 0;
+}
+
+.theme-toggle {
+  border-radius: 999px;
+  transition: background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 0.75rem 1.5rem rgba(var(--bs-primary-rgb), 0.15);
+  }
+}
+
+.language-select {
+  .dropdown-toggle {
+    border-radius: 999px;
+  }
+
+  .dropdown-menu {
+    display: none;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0 1.25rem 2rem rgba(15, 23, 42, 0.12);
+
+    &.show {
+      display: block;
+    }
+
+    .dropdown-item {
+      border-radius: 0.75rem;
+
+      &:hover {
+        background-color: rgba(var(--bs-primary-rgb), 0.08);
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-nav.nav-links {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .navbar-nav.nav-links .nav-item {
+    margin: 0.25rem 0;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    justify-content: flex-start !important;
+  }
+
+  .theme-toggle,
+  .language-select .dropdown-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+

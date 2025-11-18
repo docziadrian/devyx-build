@@ -1,0 +1,37 @@
+<section class="fivem-page container py-5">
+  <header class="fivem-page__header text-center mb-5">
+    <span class="badge rounded-pill text-bg-primary-subtle text-primary fw-semibold px-3 py-2">
+      {{ 'fivem.refQbcore.badge' | translate }}
+    </span>
+    <h1 class="display-6 fw-semibold mt-3">{{ 'fivem.refQbcore.title' | translate }}</h1>
+    <p class="lead text-body-secondary mt-3">
+      {{ 'fivem.refQbcore.subtitle' | translate }}
+    </p>
+  </header>
+
+  <app-ref-filter></app-ref-filter>
+
+  <div class="fivem-page__results mt-5" *ngIf="resources().length; else noResults">
+    <div class="resource-grid">
+      <article class="resource-card" *ngFor="let resource of resources()">
+        <div class="resource-card__body">
+          <span class="badge rounded-pill bg-light text-primary fw-semibold mb-2">{{ resource.category }}</span>
+          <h2 class="h5 fw-semibold mb-2">{{ resource.title }}</h2>
+          <p class="text-body-secondary mb-3">
+            {{ resource.descriptionKey ? (resource.descriptionKey | translate) : resource.description }}
+          </p>
+          <div class="resource-card__footer">
+            <span class="resource-card__price">{{ formatPrice(resource) }}</span>
+            <span class="resource-card__label">QBCore</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<ng-template #noResults>
+  <div class="alert alert-info text-center mt-5" role="alert">
+    {{ 'fivem.refQbcore.noResults' | translate }}
+  </div>
+</ng-template>

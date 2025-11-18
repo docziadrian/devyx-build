@@ -1,0 +1,34 @@
+<div class="notification-container">
+  <div
+    class="notification-card"
+    *ngFor="let notification of notifications$ | async; trackBy: trackById"
+    [class.success]="notification.type === 'success'"
+    [class.info]="notification.type === 'info'"
+    [class.warning]="notification.type === 'warning'"
+    [class.error]="notification.type === 'error'"
+    role="status"
+    [attr.aria-live]="notification.type === 'error' ? 'assertive' : 'polite'"
+  >
+    <div
+      class="notification-progress"
+      *ngIf="notification.autoClose"
+      [ngClass]="notification.type"
+      [style.animation-duration]="(notification.duration ?? 0) + 'ms'"
+    ></div>
+    <div class="notification-icon">
+      <i class="bi" [ngClass]="iconFor(notification)"></i>
+    </div>
+    <div class="notification-content">
+      <h6 class="notification-title">{{ notification.titleKey | translate }}</h6>
+      <p class="notification-description" *ngIf="notification.descriptionKey">
+        {{ notification.descriptionKey | translate }}
+      </p>
+    </div>
+    <button
+      type="button"
+      class="notification-close btn-close"
+      (click)="dismiss(notification)"
+      [attr.aria-label]="'notifications.close' | translate"
+    ></button>
+  </div>
+</div>
